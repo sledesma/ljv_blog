@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog || Admin</title>
+        <style>
+            html,
+            body {
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+                transition: color 0.15s;
+            }
+
+            a:hover {
+                color: orange;
+            }
+
+            nav a {
+                color: white;
+            }
+
+            nav {
+                background: black;
+                color: white;
+                width: 20%;
+                height: 100vh;
+                position: fixed;
+            }
+
+            nav .nav-item {
+                text-align: center;
+                padding: 30px;
+                transition: all 0.15s;
+            }
+
+            nav .nav-item:hover {
+                background: #0f0f0f;
+            }
+
+            main {
+                margin-left: 20%;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+
+            .posts-table {
+                width: 100%;
+                text-align: center;
+            }
+
+            .posts-table td {
+                width: 25%;
+                padding: 10px;
+                border-bottom: 1px solid #000;
+            }
+
+            .posts-table th {
+                width: 25%;
+                padding: 10px;
+                border-bottom: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-item">
+                <a href="#">Listado</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Agregar</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Editar</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Borrar</a>
+            </div>
+        </nav>
+        <main>
+            <table cellspacing="0" class="posts-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Descripcion</th>
+                        <th>Contenido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Titulo 1</td>
+                        <td>asdasd</td>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Impedit, perferendis dicta minima porro vero
+                            maxime fugit rerum animi, ipsum qui perspiciatis
+                            pariatur mollitia dolor, eos voluptas! Illo, atque
+                            dolorum? Vel.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Titulo 2</td>
+                        <td>asdasd</td>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Impedit, perferendis dicta minima porro vero
+                            maxime fugit rerum animi, ipsum qui perspiciatis
+                            pariatur mollitia dolor, eos voluptas! Illo, atque
+                            dolorum? Vel.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Titulo 3</td>
+                        <td>asdasd</td>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Impedit, perferendis dicta minima porro vero
+                            maxime fugit rerum animi, ipsum qui perspiciatis
+                            pariatur mollitia dolor, eos voluptas! Illo, atque
+                            dolorum? Vel.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

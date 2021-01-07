@@ -1,32 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+	<div>
+		<banner></banner>
+		<menu-bar v-bind:items="elems"></menu-bar>
+		<main>
+			<!-- Contenido de cada vista aquí -->
+			<post-list></post-list>
+		</main>
+	</div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Banner from "./components/Banner.vue";
+import MenuBar from "./components/MenuBar.vue";
 
-#nav {
-  padding: 30px;
-}
+// Imports temporales, de prueba
+import PostList from "./components/PostList.vue";
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+	data() {
+		return {
+			elems: [
+				{ id: 1, name: "Item", url: "#" },
+				{ id: 2, name: "Item", url: "#" },
+				{ id: 2, name: "Item", url: "#" },
+			],
+		};
+	},
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+	components: {
+		Banner,
+		MenuBar,
+		PostList,
+	},
+
+	created() {
+		this.$store.dispatch('loadPosts');
+	}
+};
+</script>

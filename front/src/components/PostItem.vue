@@ -1,15 +1,27 @@
 <template>
 	<div class="post">
-		<div class="post-title">Titulo del Post</div>
-		<div class="post-desc">Descripcion del Post</div>
+		<div class="post-title">{{ title }}</div>
+		<div class="post-desc">{{ desc }}</div>
 		<div class="post-action">
-			<a href="detalle.html">Ver más</a>
+			<router-link v-bind:to="link">Ver más</router-link>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	data(){
+		return {
+			link: `detalle/${this.id}`
+		}
+	},
+
+	props: {
+		title: String,
+		desc: String,
+		id: Number
+	}
+};
 </script>
 
 <style>

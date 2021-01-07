@@ -1,15 +1,17 @@
 <template>
 	<nav>
 		<div class="nav-item" v-for="item in items" v-bind:key="item.id">
-			<a v-bind:href="item.url">{{ item.name }}</a>
+			<router-link v-bind:to="item.url">{{ item.name }}</router-link>
 		</div>
 	</nav>
 </template>
 
 <script>
 export default {
-	props: {
-		items: Array
+	computed: {
+		items() {
+			return this.$store.getters.getMenuActual
+		}
 	}
 };
 </script>

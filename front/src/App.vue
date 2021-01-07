@@ -1,10 +1,9 @@
 <template>
 	<div>
 		<banner></banner>
-		<menu-bar v-bind:items="elems"></menu-bar>
+		<menu-bar></menu-bar>
 		<main>
-			<!-- Contenido de cada vista aquí -->
-			<post-list></post-list>
+			<router-view></router-view>
 		</main>
 	</div>
 </template>
@@ -13,24 +12,11 @@
 import Banner from "./components/Banner.vue";
 import MenuBar from "./components/MenuBar.vue";
 
-// Imports temporales, de prueba
-import PostList from "./components/PostList.vue";
-
 export default {
-	data() {
-		return {
-			elems: [
-				{ id: 1, name: "Item", url: "#" },
-				{ id: 2, name: "Item", url: "#" },
-				{ id: 2, name: "Item", url: "#" },
-			],
-		};
-	},
 
 	components: {
 		Banner,
-		MenuBar,
-		PostList,
+		MenuBar
 	},
 
 	created() {

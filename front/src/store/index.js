@@ -6,16 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		menu_views: {
-      details: [
-        { id: 1, name: "Volver", url: "/" }
-      ],
+			details: [{ id: 1, name: "Volver", url: "/" }],
 			home: [
 				{ id: 1, name: "Item", url: "#" },
 				{ id: 2, name: "Item", url: "#" },
 				{ id: 2, name: "Item", url: "#" },
 			],
-    },
-    menu_actual: 'home',
+		},
+		menu_actual: "home",
 		post_list: [],
 		post_actual: {
 			title: "",
@@ -29,11 +27,11 @@ export default new Vuex.Store({
 
 		changeActualPost(prevState, newPost) {
 			prevState.post_actual = newPost;
-    },
-    
-    changeActualMenu(prevState, newMenu) {
-      prevState.menu_actual = newMenu
-    }
+		},
+
+		changeActualMenu(prevState, newMenu) {
+			prevState.menu_actual = newMenu;
+		},
 	},
 
 	getters: {

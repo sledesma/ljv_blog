@@ -40,7 +40,7 @@ export default new Vuex.Store({
 
 	actions: {
 		loadPosts(store) {
-			fetch("https://jsonplaceholder.typicode.com/posts")
+			fetch("http://localhost:9000/posts")
 				.then((r) => r.json())
 				.then((data) => store.commit("setPostList", data));
 		},
